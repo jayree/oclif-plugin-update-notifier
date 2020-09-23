@@ -76,6 +76,7 @@ export class multiUpdateNotifier {
   public fetchInfo(): boolean {
     for (const pkg of this.packages) {
       this.options.pkg = pkg;
+      // this.options.updateCheckInterval = 0;
       const notifier = UpdateNotifier(this.options);
       if (notifier.update) {
         this.updates.push({

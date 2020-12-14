@@ -10,7 +10,7 @@ export function extractPjsonFromPlugins(plugins: IPlugin[]): [] {
   return (
     plugins
       // filter all core plugins and child plugins (plugins with a parent)
-      .filter((p) => p.type !== 'core')
+      // .filter((p) => p.type !== 'core')
       .filter((p) => typeof ((p as unknown) as Record<string, unknown>).parent === 'undefined')
       .map((p) => p.pjson) as []
   );

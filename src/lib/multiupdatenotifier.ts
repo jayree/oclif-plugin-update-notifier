@@ -52,7 +52,7 @@ export class multiUpdateNotifier {
                 config.set('changeLogUrl', changeLogUrl);
               } else {
                 // prettier-ignore
-                this.debug({ request: { name: pkg.name, url: changeLogUrl, statusCode: response.statusCode, repository: pkg.repository } });
+                this.debug({ request: { name: pkg.name, url: changeLogUrl, statusCode: response?.statusCode, repository: pkg.repository } });
               }
             });
           } else {
@@ -128,7 +128,7 @@ export class multiUpdateNotifier {
       margin: 1,
       align: 'center',
       borderColor: 'yellow',
-      borderStyle: boxen.BorderStyle.Round,
+      borderStyle: 'round',
     };
 
     message = '\n' + boxen(message, options.boxenOptions);

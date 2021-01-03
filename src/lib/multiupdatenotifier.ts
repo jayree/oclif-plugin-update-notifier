@@ -28,13 +28,11 @@ export class multiUpdateNotifier {
 
   public constructor(packages: ReducedPackageJson[], options: Record<string, unknown> = {}) {
     this.options = options;
-    this.packages = packages.map((p) => {
-      return {
-        name: p.name,
-        version: p.version,
-        repository: p.repository,
-      };
-    });
+    this.packages = packages.map((p) => ({
+      name: p.name,
+      version: p.version,
+      repository: p.repository,
+    }));
     this.debug({ scope: this.packages.map((p) => p.name) });
   }
 
@@ -54,7 +52,7 @@ export class multiUpdateNotifier {
                 config.set('changeLogUrl', changeLogUrl);
               } else {
                 // prettier-ignore
-                this.debug({ request: { name: pkg.name, url: changeLogUrl, statusCode: response.statusCode, repository: pkg.repository } });
+                this.debug({ request: { name: pkg.name, url: changeLogUrl, statusCode: response?.statusCode, repository: pkg.repository } });
               }
             });
           } else {
@@ -130,7 +128,7 @@ export class multiUpdateNotifier {
       margin: 1,
       align: 'center',
       borderColor: 'yellow',
-      borderStyle: boxen.BorderStyle.Round,
+      borderStyle: 'round',
     };
 
     message = '\n' + boxen(message, options.boxenOptions);

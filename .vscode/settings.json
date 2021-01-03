@@ -7,7 +7,7 @@
     "**/.DS_Store": true
   },
   "search.exclude": {
-    "**/lib": true,
-    "**/bin": true
+    "lib": true,
+    "bin": true
   }
 }

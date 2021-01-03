@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.0.2...v1.1.0) (2021-01-03)
+
+
+### Bug Fixes
+
+* update dependencies ([ae9b062](https://github.com/jayree/oclif-plugin-update-notifier/commit/ae9b0628ebba67457c73e37666d53fbf9b512571))
+
+
+### Features
+
+* include core plugins ([e4ebdf1](https://github.com/jayree/oclif-plugin-update-notifier/commit/e4ebdf11ca6a585faae4e955dbe6496bb46b2da0))
+
 ## [1.0.2](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.0.1...v1.0.2) (2020-09-23)
 
 

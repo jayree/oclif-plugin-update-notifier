@@ -1,1 +1,0 @@
-{"version":3,"file":"update.js","sourceRoot":"","sources":["../../src/hooks/update.ts"],"names":[],"mappings":";;;AAOA,oEAAiE;AACjE,wCAAuD;AAEvD,4DAA4D;AACrD,MAAM,MAAM,GAAmB,KAAK;IACzC,MAAM,QAAQ,GAAG,IAAI,yCAAmB,CAAC,+BAAuB,CAAC,IAAI,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC;IACvF,QAAQ,CAAC,iBAAiB,EAAE,CAAC;AAC/B,CAAC,CAAC;AAHW,QAAA,MAAM,UAGjB"}

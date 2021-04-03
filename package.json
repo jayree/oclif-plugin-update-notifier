@@ -71,7 +71,6 @@
     "commands": "./lib/commands",
     "bin": "sfdx",
     "hooks": {
-      "update": "./lib/hooks/update",
       "prerun": "./lib/hooks/prerun"
     },
     "devPlugins": [

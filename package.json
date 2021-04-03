@@ -43,11 +43,7 @@
     "eslint-config-salesforce-typescript": "^0.1.0",
     "eslint-plugin-header": "^3.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.7.13",
-    "eslint-plugin-prettier": "^3.3.0",
-    "globby": "^11.0.1",
-    "husky": "^4.3.6",
-    "mocha": "^8.2.1",
+    "husky": "^6.0.0",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
@@ -98,13 +94,7 @@
     "prepack": "sf-build",
     "pretest": "sf-compile-test",
     "test": "sf-test",
-    "version": "oclif-dev manifest && oclif-dev readme && git add README.md oclif.manifest.json"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "sf-husky-commit-msg",
-      "pre-commit": "sf-husky-pre-commit",
-      "pre-push": "sf-husky-pre-push"
-    }
+    "version": "oclif-dev manifest && oclif-dev readme && git add README.md oclif.manifest.json",
+    "prepare": "husky install"
   }
 }

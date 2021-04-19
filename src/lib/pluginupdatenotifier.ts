@@ -90,7 +90,7 @@ export class pluginUpdateNotifier {
       this.options.pkg = pkg;
       try {
         const notifier = new UpdateNotifier(this.options);
-        // debug({ check: this.options });
+        debug({ check: this.options });
         await notifier.check(this.options.spawnOptions);
         if (notifier.update) {
           Object.keys(notifier.update).forEach((distTag) => {
@@ -139,7 +139,7 @@ export class pluginUpdateNotifier {
       // prettier-ignore
       message += `\n${chalk.blueBright(pkg.pluginType === 'core' ? `${pkg.name} (${pkg.pluginType})` : pkg.name)} ${chalk.red(pkg.current)} ${chalk.reset('→')} ${chalk.green(pkg.latest)} ${chalk.dim(`(${pkg.distTag})`)}`;
       if (pkg.changeLogUrl) {
-        message += `\n${chalk.yellow('Changelog: ')}${chalk.cyan(pkg.changeLogUrl)}`;
+        message += `\n${chalk.cyan(pkg.changeLogUrl)}`;
       }
       if (index !== this.updates.length - 1) {
         message += '\n';

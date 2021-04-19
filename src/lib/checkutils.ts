@@ -15,7 +15,6 @@ const debug = Debug('pluginUpdateNotifier:utils');
 export function combineURLs(baseURL: string, relativeURL: string): string {
   return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
 }
-
 export async function check(un: UpdateNotifier): Promise<void> {
   try {
     const result = await packageJson(un.options.pkg.name, { fullMetadata: true, allVersions: true });
@@ -28,50 +27,41 @@ export async function check(un: UpdateNotifier): Promise<void> {
 
       if (update.type && update.type !== 'latest') {
         let changeLogBaseUrl;
-        try {
-          changeLogBaseUrl = result.versions[update.latest].repository.url.replace(/^git\+/, '').replace(/\.git$/, '');
-          await got(changeLogBaseUrl);
-        } catch (e1) {
-          debug({
-            options: { ...un.options, distTag },
-            error: e1.message,
-            repository: result.versions[update.latest].repository,
-          });
+        if (un.options.changeLogUrl && un.options.changeLogUrl[un.options.pkg.name]) {
           try {
-            const url = new URL(result.versions[update.latest].homepage);
-            changeLogBaseUrl = combineURLs(url.origin, url.pathname);
-            await got(changeLogBaseUrl);
-          } catch (e2) {
-            debug({
-              options: { ...un.options, distTag },
-              error: e2.message,
-              homepage: result.versions[update.latest].homepage,
-            });
-          }
-        }
-
-        if (changeLogBaseUrl) {
-          try {
-            const changeLogUrl = combineURLs(changeLogBaseUrl, `/blob/${distTag}/CHANGELOG.md`);
+            const changeLogUrl = un.options.changeLogUrl[un.options.pkg.name];
             await got(changeLogUrl);
             update.changeLogUrl = changeLogUrl;
           } catch {
-            try {
-              const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/main/CHANGELOG.md');
-              await got(changeLogUrl);
-              update.changeLogUrl = changeLogUrl;
-            } catch {
-              try {
-                const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/master/CHANGELOG.md');
-                await got(changeLogUrl);
-                update.changeLogUrl = changeLogUrl;
-              } catch {
-                update.changeLogUrl = '';
-              }
-            }
+            update.changeLogUrl = '';
           }
         } else {
-          update.changeLogUrl = '';
+          try {
+            changeLogBaseUrl = result.versions[update.latest].repository.url
+              .replace(/^git\+/, '')
+              .replace(/\.git$/, '');
+            update.changeLogUrl = await getChangelogURL(changeLogBaseUrl, distTag);
+          } catch (error) {
+            update.changeLogUrl = changeLogBaseUrl;
+            debug({
+              options: { ...un.options, distTag },
+              error: error.message,
+              repository: result.versions[update.latest].repository,
+            });
+            try {
+              const url = new URL(result.versions[update.latest].homepage);
+              changeLogBaseUrl = combineURLs(url.origin, url.pathname);
+              update.changeLogUrl = await getChangelogURL(changeLogBaseUrl, distTag);
+              // eslint-disable-next-line no-shadow
+            } catch (error) {
+              update.changeLogUrl = changeLogBaseUrl;
+              debug({
+                options: { ...un.options, distTag },
+                error: error.message,
+                homepage: result.versions[update.latest].homepage,
+              });
+            }
+          }
         }
 
         un.config.set('update', { ...un.config.get('update'), [distTag]: update });
@@ -80,5 +70,37 @@ export async function check(un: UpdateNotifier): Promise<void> {
     }
   } catch (error) {
     debug({ error });
+  }
+}
+
+async function getChangelogURL(changeLogBaseUrl: string, distTag: string): Promise<string> {
+  if (changeLogBaseUrl) {
+    try {
+      const changeLogUrl = combineURLs(changeLogBaseUrl, `/blob/${distTag}/CHANGELOG.md`);
+      await got(changeLogUrl);
+      return changeLogUrl;
+    } catch {
+      try {
+        const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/main/CHANGELOG.md');
+        await got(changeLogUrl);
+        return changeLogUrl;
+      } catch {
+        try {
+          const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/master/CHANGELOG.md');
+          await got(changeLogUrl);
+          return changeLogUrl;
+        } catch {
+          try {
+            const changeLogUrl = combineURLs(changeLogBaseUrl, '/CHANGELOG.md');
+            await got(changeLogUrl);
+            return changeLogUrl;
+          } catch {
+            throw new Error(`no valid changeLogUrl ${changeLogBaseUrl}`);
+          }
+        }
+      }
+    }
+  } else {
+    throw new Error(`no valid changeLogBaseUrl ${changeLogBaseUrl}`);
   }
 }

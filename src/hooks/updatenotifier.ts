@@ -19,6 +19,7 @@ export const updateNotifier: Hook<'updateNotifier'> = async function (options) {
     updateCheckInterval: options['updateCheckInterval'],
     spawnOptions: options['spawnOptions'],
     defer: options['defer'],
+    changeLogUrl: options['changeLogUrl'],
   });
   await notifier.check();
   if (notifier.updates.length > 0) {

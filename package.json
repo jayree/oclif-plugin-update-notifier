@@ -1,7 +1,7 @@
 {
   "name": "oclif-plugin-update-notifier",
   "description": "update-notifier for oclif plugins",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "jayree",
   "bugs": "https://github.com/jayree/oclif-plugin-update-notifier/issues",
   "dependencies": {

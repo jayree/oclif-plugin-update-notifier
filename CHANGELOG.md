@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.2.0...v1.2.1) (2021-04-20)
+
+
+### Bug Fixes
+
+* new changelog handling ([3bd20be](https://github.com/jayree/oclif-plugin-update-notifier/commit/3bd20be86f7b76f3f77e0bbcd3063e1d594c4646))
+
 # [1.2.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.1.0...v1.2.0) (2021-04-12)
 
 

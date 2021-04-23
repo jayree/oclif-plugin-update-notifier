@@ -54,12 +54,23 @@ export async function check(un: UpdateNotifier): Promise<void> {
               update.changeLogUrl = await getChangelogURL(changeLogBaseUrl, distTag);
               // eslint-disable-next-line no-shadow
             } catch (error) {
-              update.changeLogUrl = changeLogBaseUrl;
-              debug({
-                options: { ...un.options, distTag },
-                error: error.message,
-                homepage: result.versions[update.latest].homepage,
-              });
+              try {
+                const releaseBaseUrl = result.versions[update.latest].repository.url
+                  .replace(/^git\+/, '')
+                  .replace(/\.git$/, '');
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                const releaseUrl = combineURLs(releaseBaseUrl, `releases/tag/v${update.latest}`);
+                await got(releaseUrl);
+                update.changeLogUrl = releaseUrl;
+                // eslint-disable-next-line no-shadow
+              } catch (error) {
+                update.changeLogUrl = changeLogBaseUrl;
+                debug({
+                  options: { ...un.options, distTag },
+                  error: error.message,
+                  homepage: result.versions[update.latest].homepage,
+                });
+              }
             }
           }
         }

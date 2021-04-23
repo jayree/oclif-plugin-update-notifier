@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.2.1...v1.3.0) (2021-04-23)
+
+
+### Bug Fixes
+
+* plugin uninstall ([ad8aa3e](https://github.com/jayree/oclif-plugin-update-notifier/commit/ad8aa3e9ec690eb2e8711127ff720eeb52a50dad))
+
+
+### Features
+
+* add releaseURL as changeLogURL ([62586f8](https://github.com/jayree/oclif-plugin-update-notifier/commit/62586f8a42df535a7aec0bac3556104f1e33b941))
+
 ## [1.2.1](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.2.0...v1.2.1) (2021-04-20)
 
 

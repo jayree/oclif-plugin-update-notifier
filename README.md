@@ -30,7 +30,7 @@ oclif-plugin-update-notifier 1.0.0
 │                               sfdx-plugin update available!                                │
 │                                                                                            │
 │                         oclif-plugin-update-notifier 1.0.0 → 1.0.1                         │
-│ Changelog: https://github.com/jayree/oclif-plugin-update-notifier/blob/main/CHANGELOG.md │
+│ Changelog: https://github.com/jayree/oclif-plugin-update-notifier/blob/main/CHANGELOG.md   │
 │                                                                                            │
 │                     run sfdx update or sfdx plugins:update to update!                      │
 │                                                                                            │

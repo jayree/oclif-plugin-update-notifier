@@ -81,7 +81,7 @@ jobs:
             git fetch
             git checkout develop
             git pull origin develop
-            git merge origin/master
+            git merge origin/main
             git push origin develop
       - save_cache: *save-cache
 
@@ -93,12 +93,12 @@ workflows:
       - node-12
       - release:
           filters:
-            branches: { only: master }
+            branches: { only: main }
           requires:
             - node-latest
             - node-12
       - merge:
           filters:
-            branches: { only: master }
+            branches: { only: main }
           requires:
             - release

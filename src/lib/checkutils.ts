@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, jayree
+ * Copyright (c) 2021, jayree
  * All rights reserved.
  * Licensed under the BSD 3-Clause license.
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
@@ -52,7 +52,7 @@ export async function check(un: UpdateNotifier): Promise<void> {
               const url = new URL(result.versions[update.latest].homepage);
               changeLogBaseUrl = combineURLs(url.origin, url.pathname);
               update.changeLogUrl = await getChangelogURL(changeLogBaseUrl, distTag);
-              // eslint-disable-next-line no-shadow
+              // eslint-disable-next-line @typescript-eslint/no-shadow
             } catch (error) {
               try {
                 const releaseBaseUrl = result.versions[update.latest].repository.url
@@ -62,7 +62,7 @@ export async function check(un: UpdateNotifier): Promise<void> {
                 const releaseUrl = combineURLs(releaseBaseUrl, `releases/tag/v${update.latest}`);
                 await got(releaseUrl);
                 update.changeLogUrl = releaseUrl;
-                // eslint-disable-next-line no-shadow
+                // eslint-disable-next-line @typescript-eslint/no-shadow
               } catch (error) {
                 update.changeLogUrl = changeLogBaseUrl;
                 debug({

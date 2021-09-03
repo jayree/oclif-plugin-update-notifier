@@ -17,7 +17,7 @@
 ```sh-session
 $ sfdx plugins:install oclif-plugin-update-notifier
 $ sfdx plugins
-oclif-plugin-update-notifier 1.3.1
+oclif-plugin-update-notifier 1.4.0
 ```
 <!-- usagestop -->
 

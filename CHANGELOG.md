@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.3.1...v1.4.0) (2021-09-03)
+
+
+### Features
+
+* override platform wsl with linux during update command ([50f0ba1](https://github.com/jayree/oclif-plugin-update-notifier/commit/50f0ba1a19be2a860207372607489dd2048828db))
+
 ## [1.3.1](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.3.0...v1.3.1) (2021-06-24)
 
 

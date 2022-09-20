@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.4.0...v1.5.0) (2022-09-20)
+
+
+### Features
+
+* move to ESM ([e355835](https://github.com/jayree/oclif-plugin-update-notifier/commit/e355835bd50814f06ecb670bf60c95fc989763e2))
+
 # [1.4.0](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.3.1...v1.4.0) (2021-09-03)
 
 

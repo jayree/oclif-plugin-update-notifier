@@ -93,8 +93,14 @@ async function getChangelogURL(plugin: Plugin, latest: string, distTag: string):
         const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/v${latest}`);
         await got.head(releaseUrl);
         changeLogUrl = releaseUrl;
-      } catch (e) {
-        changeLogUrl = '';
+      } catch (err) {
+        try {
+          const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/${latest}`);
+          await got.head(releaseUrl);
+          changeLogUrl = releaseUrl;
+        } catch (e) {
+          changeLogUrl = '';
+        }
       }
     }
   }

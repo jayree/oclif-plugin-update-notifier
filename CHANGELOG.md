@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.1...v1.5.2) (2022-12-16)
+
+
+### Bug Fixes
+
+* prefer releases/tag url ([ecf8dc7](https://github.com/jayree/oclif-plugin-update-notifier/commit/ecf8dc72c070ab7308c38495ce4475fc6f2a8d35))
+
 ## [1.5.1](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.0...v1.5.1) (2022-10-06)
 
 

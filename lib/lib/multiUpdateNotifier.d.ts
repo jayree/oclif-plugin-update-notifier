@@ -1,7 +1,7 @@
 /// <reference types="node" resolution-mode="require"/>
 import { SpawnOptions } from 'node:child_process';
 import { Config } from '@oclif/core/lib/interfaces/index.js';
-export declare type Update = {
+export type Update = {
     name: string;
     current: string;
     latest: string;
@@ -10,7 +10,7 @@ export declare type Update = {
     pluginType: string;
     distTag: string;
 };
-export declare type Options = {
+export type Options = {
     spawnOptions: SpawnOptions;
     defer: boolean;
     updateCheckInterval: number;

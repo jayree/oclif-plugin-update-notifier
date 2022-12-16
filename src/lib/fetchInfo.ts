@@ -28,40 +28,7 @@ export type PkgUpdate = {
 const combineURLs = (baseURL: string, relativeURL: string): string =>
   baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
 
-async function validateChangelogURL(changeLogBaseUrl: string, distTag: string): Promise<string> {
-  if (changeLogBaseUrl) {
-    try {
-      const changeLogUrl = combineURLs(changeLogBaseUrl, `/blob/${distTag}/CHANGELOG.md`);
-      await got.head(changeLogUrl);
-      return changeLogUrl;
-    } catch {
-      try {
-        const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/main/CHANGELOG.md');
-        await got.head(changeLogUrl);
-        return changeLogUrl;
-      } catch {
-        try {
-          const changeLogUrl = combineURLs(changeLogBaseUrl, '/blob/master/CHANGELOG.md');
-          await got.head(changeLogUrl);
-          await got.head(changeLogBaseUrl);
-          return changeLogUrl;
-        } catch {
-          try {
-            const changeLogUrl = combineURLs(changeLogBaseUrl, '/CHANGELOG.md');
-            await got.head(changeLogUrl);
-            return changeLogUrl;
-          } catch {
-            throw new Error(`no valid changeLogUrl ${changeLogBaseUrl}`);
-          }
-        }
-      }
-    }
-  } else {
-    throw new Error(`no valid changeLogBaseUrl ${changeLogBaseUrl}`);
-  }
-}
-
-async function getChangelogURL(plugin: Plugin, latest: string, distTag: string): Promise<string> {
+async function getChangelogURL(plugin: Plugin, latest: string): Promise<string> {
   const pJson = plugin.pjson as unknown as {
     oclif: { info: { releasenotes: { releaseNotesPath: string; releaseNotesFilename: string } } };
     repository: string;
@@ -87,20 +54,16 @@ async function getChangelogURL(plugin: Plugin, latest: string, distTag: string):
       }
     }
     try {
-      changeLogUrl = await validateChangelogURL(changeLogBaseUrl, distTag);
-    } catch (error) {
+      const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/v${latest}`);
+      await got.head(releaseUrl);
+      changeLogUrl = releaseUrl;
+    } catch (err) {
       try {
-        const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/v${latest}`);
+        const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/${latest}`);
         await got.head(releaseUrl);
         changeLogUrl = releaseUrl;
-      } catch (err) {
-        try {
-          const releaseUrl = combineURLs(changeLogBaseUrl, `releases/tag/${latest}`);
-          await got.head(releaseUrl);
-          changeLogUrl = releaseUrl;
-        } catch (e) {
-          changeLogUrl = '';
-        }
+      } catch (e) {
+        changeLogUrl = '';
       }
     }
   }
@@ -118,7 +81,7 @@ export async function fetchInfo(options: Options): Promise<void> {
       let changeLogUrl: string;
 
       if (type && type !== 'latest') {
-        changeLogUrl = await getChangelogURL(options.pkg, latest, distTag);
+        changeLogUrl = await getChangelogURL(options.pkg, latest);
         update[distTag] = { latest, current: options.pkg.version, type, name: options.pkg.name, changeLogUrl };
       }
     }

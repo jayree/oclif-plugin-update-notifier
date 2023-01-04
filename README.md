@@ -36,7 +36,7 @@ $ oclif-example plugins
 
    ╭────────────────────────────────────────────────────────────────────────────────────────────╮
    │                                                                                            │
-   │                             oclif-example-plugin update available!                             │
+   │                             oclif-example-plugin update available!                         │
    │                                                                                            │
    │                             @oclif/plugin-help 5.1.11 → 5.1.12                             │
    │          Changelog: https://github.com/oclif/plugin-help/blob/main/CHANGELOG.md            │

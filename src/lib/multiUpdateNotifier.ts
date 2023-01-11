@@ -7,7 +7,8 @@
 
 import process from 'node:process';
 import { SpawnOptions, spawn } from 'node:child_process';
-import path from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { Config, Plugin } from '@oclif/core/lib/interfaces/index.js';
 import Debug from 'debug';
 import chalk from 'chalk';
@@ -15,6 +16,11 @@ import boxen from 'boxen';
 import semver from 'semver';
 import fs from 'fs-extra';
 import { fetchInfo, PkgUpdate } from './fetchInfo.js';
+
+// eslint-disable-next-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = dirname(__filename);
 
 export type Update = {
   name: string;
@@ -55,16 +61,16 @@ export class multiUpdateNotifier {
     this.options = options;
     this.plugins = config.plugins;
     this.updateCheckInterval = typeof options.updateCheckInterval === 'number' ? options.updateCheckInterval : ONE_DAY;
-    this.baseFolder = path.join(config.cacheDir, `${config.bin}-plugin-update-notifier`);
+    this.baseFolder = join(config.cacheDir, `${config.bin}-plugin-update-notifier`);
 
-    if (!fs.pathExistsSync(path.join(this.baseFolder, 'config.json'))) {
-      fs.ensureFileSync(path.join(this.baseFolder, 'config.json'));
-      fs.writeJSONSync(path.join(this.baseFolder, 'config.json'), {
+    if (!fs.pathExistsSync(join(this.baseFolder, 'config.json'))) {
+      fs.ensureFileSync(join(this.baseFolder, 'config.json'));
+      fs.writeJSONSync(join(this.baseFolder, 'config.json'), {
         optOut: false,
         lastUpdateCheck: Date.now(),
       });
     }
-    this.config = fs.readJsonSync(path.join(this.baseFolder, 'config.json')) as ConfigStore;
+    this.config = fs.readJsonSync(join(this.baseFolder, 'config.json')) as ConfigStore;
   }
   // https://github.com/yeoman/update-notifier/blob/3046d0f61a57f8270291b6ab271f8a12df8421a6/update-notifier.js#L86
   public async check(): Promise<void> {
@@ -94,11 +100,7 @@ export class multiUpdateNotifier {
         };
 
         if (options.spawnOptions.detached) {
-          spawn(
-            process.execPath,
-            [path.join(new URL('./', import.meta.url).pathname, 'check.js'), JSON.stringify(options)],
-            options.spawnOptions
-          ).unref();
+          spawn(process.execPath, [join(__dirname, 'check.js'), JSON.stringify(options)], options.spawnOptions).unref();
         } else {
           checkPromises.push(fetchInfo(options));
         }
@@ -114,7 +116,7 @@ export class multiUpdateNotifier {
       await this.getUpdates();
     }
     this.config.lastUpdateCheck = Date.now();
-    await fs.writeJson(path.join(this.baseFolder, 'config.json'), this.config);
+    await fs.writeJson(join(this.baseFolder, 'config.json'), this.config);
   }
 
   // https://github.com/yeoman/update-notifier/blob/3046d0f61a57f8270291b6ab271f8a12df8421a6/update-notifier.js#L129
@@ -155,8 +157,8 @@ export class multiUpdateNotifier {
 
   private async getUpdates(): Promise<void> {
     for await (const pkg of this.plugins) {
-      if (await fs.pathExists(path.join(this.baseFolder, `${pkg.name}.json`))) {
-        const config = (await fs.readJson(path.join(this.baseFolder, `${pkg.name}.json`))) as { update: PkgUpdate };
+      if (await fs.pathExists(join(this.baseFolder, `${pkg.name}.json`))) {
+        const config = (await fs.readJson(join(this.baseFolder, `${pkg.name}.json`))) as { update: PkgUpdate };
 
         if (config.update) {
           Object.keys(config.update).forEach((distTag) => {
@@ -172,7 +174,7 @@ export class multiUpdateNotifier {
               this.debug(update);
             }
           });
-          await fs.remove(path.join(this.baseFolder, `${pkg.name}.json`));
+          await fs.remove(join(this.baseFolder, `${pkg.name}.json`));
         }
       }
     }

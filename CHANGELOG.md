@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.6...v1.5.7) (2023-01-12)
+
+
+### Bug Fixes
+
+* restore windows compatibility ([1b13ca0](https://github.com/jayree/oclif-plugin-update-notifier/commit/1b13ca00bdd4bcfa589fce85cdead6aa16db892c))
+
 ## [1.5.6](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.5...v1.5.6) (2023-01-06)
 
 

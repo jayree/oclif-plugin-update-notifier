@@ -18,7 +18,7 @@
     "package-json": "^8.1.0",
     "semver": "^7.3.8",
     "semver-diff": "^4.0.0",
-    "tslib": "^2.4.1"
+    "tslib": "^2.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",

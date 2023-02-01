@@ -9,7 +9,7 @@ import { SpawnOptions } from 'node:child_process';
 import path from 'node:path';
 import got from 'got';
 import semverDiff from 'semver-diff';
-import { CliUx } from '@oclif/core';
+import { ux } from '@oclif/core';
 import packageJson from 'package-json';
 import { Plugin } from '@oclif/core/lib/interfaces/index.js';
 import fs from 'fs-extra';
@@ -90,6 +90,6 @@ export async function fetchInfo(options: Options): Promise<void> {
       await fs.writeJson(path.join(options.baseFolder, `${options.pkg.name}.json`), { update });
     }
   } catch (error) {
-    CliUx.ux.warn((error as Error).message);
+    ux.warn((error as Error).message);
   }
 }

@@ -14,6 +14,8 @@ import { fetchInfo, Options } from './fetchInfo.js';
   await fetchInfo(JSON.parse(process.argv[2]) as Options);
   process.exit();
 })().catch((error) => {
-  console.error(error);
+  if (error instanceof Error) {
+    console.error(error.message);
+  }
   process.exit(1);
 });

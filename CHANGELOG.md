@@ -1,3 +1,11 @@
+## [1.5.12](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.11...v1.5.12) (2023-02-10)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.0.8 to 2.0.11 ([#120](https://github.com/jayree/oclif-plugin-update-notifier/issues/120)) ([cd09e93](https://github.com/jayree/oclif-plugin-update-notifier/commit/cd09e9386f6dbd83835a027c2e03467391927388))
+* **deps:** bump @salesforce/kit from 1.8.4 to 1.8.5 ([#116](https://github.com/jayree/oclif-plugin-update-notifier/issues/116)) ([7aef869](https://github.com/jayree/oclif-plugin-update-notifier/commit/7aef869af5ba579edfbf12699ff0a0f016dbc1e2))
+
 ## [1.5.11](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.10...v1.5.11) (2023-02-01)
 
 

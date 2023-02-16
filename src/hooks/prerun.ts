@@ -12,7 +12,6 @@ const isOutputEnabled = !process.argv.find((arg) => ['--json', '--help', '-h'].i
 
 export const prerun: Hook<'prerun'> = async function (options) {
   const debug = Debug(`${this.config.bin}:oclif-plugin-update-notifier:hooks:prerun`);
-  debug({ CommandID: options.Command.id });
 
   if (env.getBoolean('OCLIF_DISABLE_UPDATENOTIFIER')) {
     debug('found: OCLIF_DISABLE_UPDATENOTIFIER=true');

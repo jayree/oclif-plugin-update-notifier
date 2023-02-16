@@ -9,7 +9,10 @@ import chalk from 'chalk';
 import Debug from 'debug';
 import { multiUpdateNotifier, Options } from '../lib/multiUpdateNotifier.js';
 
-type HookOptions = Options & { config: Config } & { changeLogUrl: { [pkg: string]: string }; ignoreDistTags: string[] };
+type HookOptions = Options & { config: Config } & {
+  changeLogUrl?: { [pkg: string]: string };
+  ignoreDistTags: string[];
+};
 
 export const updateNotifier: Hook<'updateNotifier'> = async function (options: HookOptions) {
   const debug = Debug(`${this.config.bin}:oclif-plugin-update-notifier:hooks:updatenotifier`);

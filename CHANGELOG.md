@@ -1,3 +1,10 @@
+## [1.5.13](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.12...v1.5.13) (2023-02-17)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.0.11 to 2.1.5 ([#124](https://github.com/jayree/oclif-plugin-update-notifier/issues/124)) ([ec6a0b3](https://github.com/jayree/oclif-plugin-update-notifier/commit/ec6a0b3c6fd2b08f9e6557c04114d62f3fc7e945))
+
 ## [1.5.12](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.11...v1.5.12) (2023-02-10)
 
 

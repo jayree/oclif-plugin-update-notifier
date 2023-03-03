@@ -22,7 +22,7 @@ $ oclif-example plugins:install oclif-plugin-update-notifier
 $ oclif-example plugins:[COMMAND]
 running command...
 $ oclif-example plugins
-oclif-plugin-update-notifier 1.5.13
+oclif-plugin-update-notifier 1.5.14
 $ oclif-example help plugins:[COMMAND]
 USAGE
   $ oclif-example plugins:COMMAND
@@ -60,5 +60,5 @@ DESCRIPTION
   check installed plugins for updates
 ```
 
-_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.13/src/commands/plugins/update/check.ts)_
+_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.14/src/commands/plugins/update/check.ts)_
 <!-- commandsstop -->

@@ -1,9 +1,7 @@
 # oclif-plugin-update-notifier
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-plugin-update-notifier.svg)](https://npmjs.org/package/oclif-plugin-update-notifier)
-[![CircleCI](https://circleci.com/gh/jayree/oclif-plugin-update-notifier/tree/main.svg?style=shield)](https://circleci.com/gh/jayree/oclif-plugin-update-notifier/tree/main)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/jayree/oclif-plugin-update-notifier?branch=main&svg=true)](https://ci.appveyor.com/project/jayree/oclif-plugin-update-notifier/branch/main)
-[![Codecov](https://codecov.io/gh/jayree/oclif-plugin-update-notifier/branch/main/graph/badge.svg)](https://codecov.io/gh/jayree/oclif-plugin-update-notifier)
+[![Version](https://img.shields.io/npm/v/oclif-plugin-update-notifier.svg?label=oclif-plugin-update-notifier)](https://npmjs.org/package/oclif-plugin-update-notifier)
+[![test-and-release](https://github.com/jayree/oclif-plugin-update-notifier/actions/workflows/release.yml/badge.svg)](https://github.com/jayree/oclif-plugin-update-notifier/actions/workflows/release.yml)
 [![Downloads/week](https://img.shields.io/npm/dw/oclif-plugin-update-notifier.svg)](https://npmjs.org/package/oclif-plugin-update-notifier)
 [![License](https://img.shields.io/npm/l/oclif-plugin-update-notifier.svg)](https://github.com/jayree/oclif-plugin-update-notifier/blob/main/package.json)
 

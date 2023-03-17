@@ -112,7 +112,8 @@ export class multiUpdateNotifier {
     }
 
     if (!this.options.spawnOptions.detached) {
-      await Promise.all(checkPromises);
+      const result = await Promise.all(checkPromises);
+      this.debug({ result });
       await this.getUpdates();
     }
     this.config.lastUpdateCheck = Date.now();

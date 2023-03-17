@@ -16,4 +16,6 @@ export type PkgUpdate = {
         changeLogUrl: string;
     };
 };
-export declare function fetchInfo(options: Options): Promise<void>;
+export declare function fetchInfo(options: Options): Promise<{
+    [pkg: string]: PkgUpdate | string;
+}>;

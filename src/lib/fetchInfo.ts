@@ -9,7 +9,6 @@ import { SpawnOptions } from 'node:child_process';
 import path from 'node:path';
 import got from 'got';
 import semverDiff from 'semver-diff';
-import { ux } from '@oclif/core';
 import packageJson from 'package-json';
 import { Plugin } from '@oclif/core/lib/interfaces/index.js';
 import fs from 'fs-extra';
@@ -71,7 +70,7 @@ async function getChangelogURL(plugin: Plugin, latest: string): Promise<string> 
 }
 
 // https://github.com/yeoman/update-notifier/blob/3046d0f61a57f8270291b6ab271f8a12df8421a6/update-notifier.js#L117
-export async function fetchInfo(options: Options): Promise<void> {
+export async function fetchInfo(options: Options): Promise<{ [pkg: string]: PkgUpdate | string }> {
   try {
     const pkgJson = await packageJson(options.pkg.name, { allVersions: true });
     const update: PkgUpdate = {};
@@ -89,7 +88,8 @@ export async function fetchInfo(options: Options): Promise<void> {
       await fs.ensureFile(path.join(options.baseFolder, `${options.pkg.name}.json`));
       await fs.writeJson(path.join(options.baseFolder, `${options.pkg.name}.json`), { update });
     }
+    return { [options.pkg.name]: update };
   } catch (error) {
-    ux.warn((error as Error).message);
+    return { [options.pkg.name]: (error as Error).message };
   }
 }

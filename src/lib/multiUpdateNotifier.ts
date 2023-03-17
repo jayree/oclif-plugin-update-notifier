@@ -9,7 +9,7 @@ import process from 'node:process';
 import { SpawnOptions, spawn } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Config, Plugin } from '@oclif/core/lib/interfaces/index.js';
+import { Interfaces } from '@oclif/core';
 import Debug from 'debug';
 import chalk from 'chalk';
 import boxen from 'boxen';
@@ -51,11 +51,11 @@ export class multiUpdateNotifier {
   private options: Options;
   private config: ConfigStore;
   private updateCheckInterval: number;
-  private plugins: Plugin[];
+  private plugins: Interfaces.Plugin[];
   private debug: Debug.Debugger;
   private baseFolder: string;
 
-  public constructor(config: Config, options: Options) {
+  public constructor(config: Interfaces.Config, options: Options) {
     this.debug = Debug(`${config.bin}:oclif-plugin-update-notifier:updatenotifier`);
 
     this.options = options;

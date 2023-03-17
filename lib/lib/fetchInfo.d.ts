@@ -1,10 +1,10 @@
-/// <reference types="node" resolution-mode="require"/>
+/// <reference types="node" />
 import { SpawnOptions } from 'node:child_process';
-import { Plugin } from '@oclif/core/lib/interfaces/index.js';
+import { Interfaces } from '@oclif/core';
 export type Options = {
     spawnOptions: SpawnOptions;
     defer: boolean;
-    pkg: Plugin;
+    pkg: Interfaces.Plugin;
     baseFolder: string;
 };
 export type PkgUpdate = {

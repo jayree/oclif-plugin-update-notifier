@@ -10,13 +10,13 @@ import path from 'node:path';
 import got from 'got';
 import semverDiff from 'semver-diff';
 import packageJson from 'package-json';
-import { Plugin } from '@oclif/core/lib/interfaces/index.js';
+import { Interfaces } from '@oclif/core';
 import fs from 'fs-extra';
 
 export type Options = {
   spawnOptions: SpawnOptions;
   defer: boolean;
-  pkg: Plugin;
+  pkg: Interfaces.Plugin;
   baseFolder: string;
 };
 
@@ -27,7 +27,7 @@ export type PkgUpdate = {
 const combineURLs = (baseURL: string, relativeURL: string): string =>
   baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
 
-async function getChangelogURL(plugin: Plugin, latest: string): Promise<string> {
+async function getChangelogURL(plugin: Interfaces.Plugin, latest: string): Promise<string> {
   const pJson = plugin.pjson as unknown as {
     oclif: { info: { releasenotes: { releaseNotesPath: string; releaseNotesFilename: string } } };
     repository: string;
@@ -39,7 +39,7 @@ async function getChangelogURL(plugin: Plugin, latest: string): Promise<string> 
   if (pJson.oclif?.info?.releasenotes?.releaseNotesPath && pJson.oclif?.info?.releasenotes?.releaseNotesFilename) {
     changeLogUrl = `${pJson.oclif?.info?.releasenotes?.releaseNotesPath}/${pJson.oclif?.info?.releasenotes?.releaseNotesFilename}`;
   } else {
-    let changeLogBaseUrl: string;
+    let changeLogBaseUrl = '';
     try {
       changeLogBaseUrl = `https://github.com/${pJson.repository}`;
       await got.head(changeLogBaseUrl);

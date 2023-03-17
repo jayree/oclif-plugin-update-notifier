@@ -1,6 +1,6 @@
-/// <reference types="node" resolution-mode="require"/>
+/// <reference types="node" />
 import { SpawnOptions } from 'node:child_process';
-import { Config } from '@oclif/core/lib/interfaces/index.js';
+import { Interfaces } from '@oclif/core';
 export type Update = {
     name: string;
     current: string;
@@ -23,7 +23,7 @@ export declare class multiUpdateNotifier {
     private plugins;
     private debug;
     private baseFolder;
-    constructor(config: Config, options: Options);
+    constructor(config: Interfaces.Config, options: Options);
     check(): Promise<void>;
     notify(options: {
         header: string;

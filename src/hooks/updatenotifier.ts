@@ -14,7 +14,7 @@ type HookOptions = Options & { config: Config } & {
   ignoreDistTags: string[];
 };
 
-export const updateNotifier: Hook<'updateNotifier'> = async function (options: HookOptions) {
+export const updateNotifier = async function (this: Hook.Context, options: HookOptions): Promise<void> {
   const debug = Debug(`${this.config.bin}:oclif-plugin-update-notifier:hooks:updatenotifier`);
   if (!options.spawnOptions.detached) ux.action.start('check for updates');
   if (debug.enabled) options.spawnOptions.stdio = 'inherit';
@@ -27,7 +27,7 @@ export const updateNotifier: Hook<'updateNotifier'> = async function (options: H
   if (notifier.updates.length > 0) {
     if (options.changeLogUrl) {
       notifier.updates.forEach((update) => {
-        if (options.changeLogUrl[update.name]) {
+        if (options.changeLogUrl?.[update.name]) {
           update.changeLogUrl = options.changeLogUrl[update.name];
         }
       });

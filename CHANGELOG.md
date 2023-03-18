@@ -1,3 +1,10 @@
+## [1.5.17](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.16...v1.5.17) (2023-03-18)
+
+
+### Bug Fixes
+
+* fix return fetchInfo ([18480e8](https://github.com/jayree/oclif-plugin-update-notifier/commit/18480e8a66a1118db812a3b3cd86248e8a2e0e43))
+
 ## [1.5.16](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.15...v1.5.16) (2023-03-17)
 
 

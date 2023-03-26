@@ -1,3 +1,10 @@
+## [1.5.19](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.18...v1.5.19) (2023-03-26)
+
+
+### Bug Fixes
+
+* changelog hook ([7d4b01b](https://github.com/jayree/oclif-plugin-update-notifier/commit/7d4b01b7c5b7f3fa02cf00421b2aa51f4190697e))
+
 ## [1.5.18](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.17...v1.5.18) (2023-03-24)
 
 

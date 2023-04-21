@@ -17,7 +17,7 @@
     "marked": "^4.3.0",
     "marked-terminal": "^5.1.1",
     "package-json": "^8.1.0",
-    "semver": "^7.4.0",
+    "semver": "^7.5.0",
     "semver-diff": "^4.0.0",
     "tslib": "^2.5.0"
   },

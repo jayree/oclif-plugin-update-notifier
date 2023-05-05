@@ -7,7 +7,7 @@
 import { Hook, ux, Config } from '@oclif/core';
 import chalk from 'chalk';
 import Debug from 'debug';
-import { multiUpdateNotifier, Options } from '../lib/multiUpdateNotifier.js';
+import { multiUpdateNotifier, Options } from '../utils/multiUpdateNotifier.js';
 
 type HookOptions = Options & { config: Config } & {
   changeLogUrl?: { [pkg: string]: string };

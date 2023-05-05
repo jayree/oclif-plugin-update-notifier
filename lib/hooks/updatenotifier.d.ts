@@ -1,5 +1,5 @@
 import { Hook, Config } from '@oclif/core';
-import { Options } from '../lib/multiUpdateNotifier.js';
+import { Options } from '../utils/multiUpdateNotifier.js';
 type HookOptions = Options & {
     config: Config;
 } & {

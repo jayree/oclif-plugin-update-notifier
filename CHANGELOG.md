@@ -1,3 +1,11 @@
+## [1.5.26](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.25...v1.5.26) (2023-05-23)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/kit from 3.0.0 to 3.0.1 ([#242](https://github.com/jayree/oclif-plugin-update-notifier/issues/242)) ([1ee6926](https://github.com/jayree/oclif-plugin-update-notifier/commit/1ee6926ceab71f622ce410fca0644ca036b176c8))
+* remove spinner action ([d93c256](https://github.com/jayree/oclif-plugin-update-notifier/commit/d93c2564371c551354a301ec17c3cf5a6657f37d))
+
 ## [1.5.25](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.24...v1.5.25) (2023-05-19)
 
 

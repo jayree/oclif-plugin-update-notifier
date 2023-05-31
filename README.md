@@ -8,22 +8,21 @@
 Update notifications for oclif plugins based on [yeoman/update-notifier](https://github.com/yeoman/update-notifier)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+* [oclif-plugin-update-notifier](#oclif-plugin-update-notifier)
 <!-- tocstop -->
 
 ## Usage
 
 <!-- usage -->
 ```sh-session
-$ oclif-example plugins:install oclif-plugin-update-notifier
-$ oclif-example plugins:[COMMAND]
+$ npm install -g oclif-plugin-update-notifier
+$ oclif-example COMMAND
 running command...
-$ oclif-example plugins
-oclif-plugin-update-notifier 1.5.27
-$ oclif-example help plugins:[COMMAND]
+$ oclif-example (--version)
+oclif-plugin-update-notifier/1.5.28 linux-x64 node-v18.16.0
+$ oclif-example --help [COMMAND]
 USAGE
-  $ oclif-example plugins:COMMAND
+  $ oclif-example COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -58,5 +57,5 @@ DESCRIPTION
   check installed plugins for updates
 ```
 
-_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.27/src/commands/plugins/update/check.ts)_
+_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.28/src/commands/plugins/update/check.ts)_
 <!-- commandsstop -->

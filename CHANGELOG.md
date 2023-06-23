@@ -1,3 +1,10 @@
+## [1.5.31](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.30...v1.5.31) (2023-06-23)
+
+
+### Bug Fixes
+
+* **deps:** bump semver from 7.5.2 to 7.5.3 ([#283](https://github.com/jayree/oclif-plugin-update-notifier/issues/283)) ([a147fd0](https://github.com/jayree/oclif-plugin-update-notifier/commit/a147fd09796b83ac153bad38b341274b0ae7e464))
+
 ## [1.5.30](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.29...v1.5.30) (2023-06-16)
 
 

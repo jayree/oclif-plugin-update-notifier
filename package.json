@@ -15,7 +15,7 @@
     "fs-extra": "^11.1.1",
     "got": "^13.0.0",
     "package-json": "^8.1.1",
-    "semver": "^7.5.2",
+    "semver": "^7.5.3",
     "semver-diff": "^4.0.0",
     "tslib": "^2.5.3"
   },

@@ -1757,10 +1757,10 @@ bl@^4.1.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-boxen@*, boxen@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/boxen/-/boxen-7.1.0.tgz#ba10a9ef4e73a9e220105b5f8c07a56d359a4cb4"
-  integrity sha512-ScG8CDo8dj7McqCZ5hz4dIBp20xj4unQ2lXIDa7ff6RcZElCpuNzutdwzKVvRikfNjm7CFAlR3HJHcoHkDOExQ==
+boxen@*, boxen@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/boxen/-/boxen-7.1.1.tgz#f9ba525413c2fec9cdb88987d835c4f7cad9c8f4"
+  integrity sha512-2hCgjEmP8YLWQ130n2FerGv7rYpfBmnmp9Uy2Le1vge6X3gZIfSmEzP5QTDElFxcvVcXlEn8Aq6MU/PZygIOog==
   dependencies:
     ansi-align "^3.0.1"
     camelcase "^7.0.1"

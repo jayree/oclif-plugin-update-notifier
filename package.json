@@ -82,7 +82,6 @@
       }
     },
     "hooks": {
-      "init": "./lib/hooks/init",
       "prerun": "./lib/hooks/prerun",
       "updatenotifier": "./lib/hooks/updatenotifier",
       "update": "./lib/hooks/changelog"

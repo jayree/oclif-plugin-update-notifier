@@ -1,3 +1,10 @@
+## [1.5.34](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.33...v1.5.34) (2023-07-19)
+
+
+### Bug Fixes
+
+* remove init hook ([94fadb2](https://github.com/jayree/oclif-plugin-update-notifier/commit/94fadb2be2bf18613a34a81e7f085e3821cc74a0))
+
 ## [1.5.33](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.32...v1.5.33) (2023-07-14)
 
 

@@ -150,9 +150,11 @@ export class multiUpdateNotifier {
     })}`;
 
     if (options.defer === false) {
+      // eslint-disable-next-line no-console
       console.error(message);
     } else {
       process.on('exit', () => {
+        // eslint-disable-next-line no-console
         console.error(message);
       });
     }

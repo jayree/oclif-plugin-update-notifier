@@ -84,7 +84,9 @@ export class multiUpdateNotifier {
 
     if (Date.now() - this.config.lastUpdateCheck < this.updateCheckInterval) {
       this.debug(
-        `updateCheckInterval not reached yet (${this.updateCheckInterval - (Date.now() - this.config.lastUpdateCheck)})`
+        `updateCheckInterval not reached yet (${
+          this.updateCheckInterval - (Date.now() - this.config.lastUpdateCheck)
+        })`,
       );
       return;
     }

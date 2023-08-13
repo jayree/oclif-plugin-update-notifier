@@ -15,6 +15,7 @@ import { fetchInfo, Options } from './fetchInfo.js';
   process.exit();
 })().catch((error) => {
   if (error instanceof Error) {
+    // eslint-disable-next-line no-console
     console.error(error.message);
   }
   process.exit(1);

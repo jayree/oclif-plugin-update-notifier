@@ -7,7 +7,7 @@
   "bugs": "https://github.com/jayree/oclif-plugin-update-notifier/issues",
   "dependencies": {
     "@jayree/changelog": "^1.1.5",
-    "@oclif/core": "^2.14.0",
+    "@oclif/core": "^2.15.0",
     "@salesforce/kit": "^3.0.11",
     "boxen": "^7.1.1",
     "chalk": "^5.3.0",
@@ -158,45 +158,11 @@
       ],
       "output": []
     },
-    "test:compile": {
-      "command": "tsc -p \"./test\" --pretty",
-      "files": [
-        "test/**/*.ts",
-        "**/tsconfig.json"
-      ],
-      "output": []
-    },
     "test": {
       "dependencies": [
         "test:deprecation-policy",
         "lint",
         "test:json-schema"
-      ]
-    },
-    "test:only": {
-      "command": "c8 mocha \"test/**/*test.ts\"",
-      "env": {
-        "FORCE_COLOR": "2"
-      },
-      "files": [
-        "test/**/*.ts",
-        "src/**/*.ts",
-        "**/tsconfig.json",
-        ".mocha*",
-        "!*.nut.ts",
-        ".nycrc"
-      ],
-      "output": []
-    },
-    "test:command-reference": {
-      "command": "\"./bin/dev.js\" commandreference:generate --erroronwarnings",
-      "files": [
-        "src/**/*.ts",
-        "messages/**",
-        "package.json"
-      ],
-      "output": [
-        "tmp/root"
       ]
     },
     "test:deprecation-policy": {

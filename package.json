@@ -24,7 +24,7 @@
     "@oclif/plugin-help": "^5.2.19",
     "@oclif/test": "^2.5.1",
     "@salesforce/dev-config": "^4.0.1",
-    "@salesforce/dev-scripts": "^5.8.0",
+    "@salesforce/dev-scripts": "^5.10.0",
     "@salesforce/prettier-config": "^0.0.3",
     "@types/boxen": "^3.0.1",
     "@types/debug": "^4.1.8",

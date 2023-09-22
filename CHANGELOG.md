@@ -1,3 +1,10 @@
+## [1.5.42](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.41...v1.5.42) (2023-09-22)
+
+
+### Bug Fixes
+
+* add oclif.lock ([49bc9b1](https://github.com/jayree/oclif-plugin-update-notifier/commit/49bc9b183105251a653098356ac16fe3c9545a7e))
+
 ## [1.5.41](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.40...v1.5.41) (2023-09-01)
 
 

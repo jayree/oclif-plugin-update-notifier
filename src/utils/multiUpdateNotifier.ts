@@ -59,7 +59,7 @@ export class multiUpdateNotifier {
     this.debug = Debug(`${config.bin}:oclif-plugin-update-notifier:updatenotifier`);
 
     this.options = options;
-    this.plugins = config.plugins;
+    this.plugins = config.getPluginsList();
     this.updateCheckInterval = typeof options.updateCheckInterval === 'number' ? options.updateCheckInterval : ONE_DAY;
     this.baseFolder = join(config.cacheDir, `${config.bin}-plugin-update-notifier`);
 

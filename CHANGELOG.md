@@ -1,3 +1,10 @@
+## [1.5.45](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.44...v1.5.45) (2023-10-10)
+
+
+### Bug Fixes
+
+* use getPluginsList ([df3dd70](https://github.com/jayree/oclif-plugin-update-notifier/commit/df3dd7093fb32af8662097649cf0c14c4317d3b0))
+
 ## [1.5.44](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.43...v1.5.44) (2023-10-06)
 
 

@@ -80,7 +80,8 @@
         "releaseNotesPath": "https://github.com/jayree/oclif-plugin-update-notifier/tree/main",
         "releaseNotesFilename": "CHANGELOG.md"
       }
-    }
+    },
+    "topicSeparator": " "
   },
   "repository": "jayree/oclif-plugin-update-notifier",
   "scripts": {

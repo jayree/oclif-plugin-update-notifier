@@ -1,3 +1,10 @@
+## [1.5.59](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.58...v1.5.59) (2024-01-29)
+
+
+### Bug Fixes
+
+* **deps:** bump package-json from 8.1.1 to 9.0.0 ([#564](https://github.com/jayree/oclif-plugin-update-notifier/issues/564)) ([a7561d4](https://github.com/jayree/oclif-plugin-update-notifier/commit/a7561d4fd974a1f307afc57ce03b5c8105af1fd4))
+
 ## [1.5.58](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.57...v1.5.58) (2024-01-12)
 
 

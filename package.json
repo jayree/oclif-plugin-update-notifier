@@ -31,7 +31,7 @@
     "c8": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-sf-plugin": "^1.17.4",
-    "oclif": "^4.6.1",
+    "oclif": "^4.7.1",
     "patch-package": "^8.0.0",
     "pinst": "^3.0.0",
     "prettier": "^3.2.5",

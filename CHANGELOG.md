@@ -1,3 +1,10 @@
+## [1.5.80](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.79...v1.5.80) (2024-06-21)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/kit from 3.1.4 to 3.1.6 ([#686](https://github.com/jayree/oclif-plugin-update-notifier/issues/686)) ([aa866e2](https://github.com/jayree/oclif-plugin-update-notifier/commit/aa866e24738f31f77418ed54e6720ad739da6ee3))
+
 ## [1.5.79](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.78...v1.5.79) (2024-06-15)
 
 

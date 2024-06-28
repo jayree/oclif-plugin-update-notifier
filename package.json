@@ -6,7 +6,7 @@
   "type": "module",
   "bugs": "https://github.com/jayree/oclif-plugin-update-notifier/issues",
   "dependencies": {
-    "@jayree/changelog": "^1.2.0",
+    "@jayree/changelog": "^1.2.1",
     "@oclif/core": "^4.0.6",
     "@salesforce/kit": "^3.1.6",
     "boxen": "^7.1.1",

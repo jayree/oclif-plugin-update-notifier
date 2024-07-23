@@ -1,3 +1,10 @@
+## [1.5.86](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.85...v1.5.86) (2024-07-23)
+
+
+### Bug Fixes
+
+* **deps:** bump boxen from 7.1.1 to 8.0.0 ([#715](https://github.com/jayree/oclif-plugin-update-notifier/issues/715)) ([4c72192](https://github.com/jayree/oclif-plugin-update-notifier/commit/4c72192bc7b21e97f2fe42cf03b759342e131947))
+
 ## [1.5.85](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.84...v1.5.85) (2024-07-19)
 
 

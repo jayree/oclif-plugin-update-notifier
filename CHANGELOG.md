@@ -1,3 +1,10 @@
+## [1.5.88](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.87...v1.5.88) (2024-07-30)
+
+
+### Bug Fixes
+
+* downgrade boxen ([9c37869](https://github.com/jayree/oclif-plugin-update-notifier/commit/9c378694bbce92f4d6603978c9b838d556fefd09))
+
 ## [1.5.87](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.86...v1.5.87) (2024-07-26)
 
 

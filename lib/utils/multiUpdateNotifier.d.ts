@@ -1,4 +1,3 @@
-/// <reference types="node" resolution-mode="require"/>
 import { SpawnOptions } from 'node:child_process';
 import { Interfaces } from '@oclif/core';
 export type Update = {

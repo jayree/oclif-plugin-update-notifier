@@ -1,3 +1,10 @@
+## [1.5.98](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.97...v1.5.98) (2024-10-11)
+
+
+### Bug Fixes
+
+* **deps:** bump got from 14.4.2 to 14.4.3 ([#784](https://github.com/jayree/oclif-plugin-update-notifier/issues/784)) ([6fcff90](https://github.com/jayree/oclif-plugin-update-notifier/commit/6fcff901428963ebaaca17546fbf8a1c5f1a8b3b))
+
 ## [1.5.97](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.96...v1.5.97) (2024-10-04)
 
 

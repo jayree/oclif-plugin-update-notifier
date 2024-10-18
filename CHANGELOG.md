@@ -1,3 +1,10 @@
+## [1.5.99](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.98...v1.5.99) (2024-10-18)
+
+
+### Bug Fixes
+
+* **deps:** bump tslib from 2.7.0 to 2.8.0 ([#786](https://github.com/jayree/oclif-plugin-update-notifier/issues/786)) ([e1c0a41](https://github.com/jayree/oclif-plugin-update-notifier/commit/e1c0a4187404ace7fb8eb5f14de6547573723bca))
+
 ## [1.5.98](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.97...v1.5.98) (2024-10-11)
 
 

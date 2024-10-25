@@ -2267,10 +2267,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@types/boxen@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@types/boxen/-/boxen-3.0.1.tgz#0b5f34d42be6ad719ff16f58bc6b2ab39c9a2d18"
-  integrity sha512-ObwY6IiWavHUIev4fO/t+bsUYiNXEDrCjKNWFBr4YuyvJ0Jls6hLCOpIRIzwGayG7AUjlQRNmNmlVUQpjbHjeA==
+"@types/boxen@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@types/boxen/-/boxen-3.0.5.tgz#a3f34024840214fc8525abd2b2f09778986d0e69"
+  integrity sha512-5O+dAJuahjV1PiRRYBRAJkpyCk9UjoWzdmhftmEwafoYx0DhPBT9qIwrKCCIpt/DdcG1g7/UD5lrf4qmHkp8TQ==
   dependencies:
     boxen "*"
 

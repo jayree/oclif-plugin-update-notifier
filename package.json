@@ -17,7 +17,7 @@
     "package-json": "^10.0.1",
     "semver": "^7.6.3",
     "semver-diff": "^4.0.0",
-    "tslib": "^2.8.0"
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.2.20",

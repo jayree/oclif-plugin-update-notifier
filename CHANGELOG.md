@@ -1,3 +1,11 @@
+## [1.5.111](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.110...v1.5.111) (2025-01-31)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 4.2.4 to 4.2.5 ([#861](https://github.com/jayree/oclif-plugin-update-notifier/issues/861)) ([ec5f17d](https://github.com/jayree/oclif-plugin-update-notifier/commit/ec5f17d04af2e7cc90870abc4d608ef287ce53c7))
+* **deps:** bump semver from 7.6.3 to 7.7.0 ([#858](https://github.com/jayree/oclif-plugin-update-notifier/issues/858)) ([a3f68d4](https://github.com/jayree/oclif-plugin-update-notifier/commit/a3f68d4c24b32120cf0222278491520a7839afc3))
+
 ## [1.5.110](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.109...v1.5.110) (2025-01-24)
 
 

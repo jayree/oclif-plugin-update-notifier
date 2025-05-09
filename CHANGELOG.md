@@ -1,3 +1,10 @@
+## [1.5.120](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.119...v1.5.120) (2025-05-09)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.8 to 1.2.9 ([#919](https://github.com/jayree/oclif-plugin-update-notifier/issues/919)) ([40c1eb2](https://github.com/jayree/oclif-plugin-update-notifier/commit/40c1eb29d005f894be65f50ec2e9d397ec2787e8))
+
 ## [1.5.119](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.118...v1.5.119) (2025-05-02)
 
 

@@ -1,3 +1,10 @@
+## [1.5.132](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.131...v1.5.132) (2025-08-22)
+
+
+### Bug Fixes
+
+* **deps:** bump chalk from 5.5.0 to 5.6.0 ([#979](https://github.com/jayree/oclif-plugin-update-notifier/issues/979)) ([2cf1ebc](https://github.com/jayree/oclif-plugin-update-notifier/commit/2cf1ebc1698f62e0921536e8c957cb4681c68752))
+
 ## [1.5.131](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.130...v1.5.131) (2025-08-15)
 
 

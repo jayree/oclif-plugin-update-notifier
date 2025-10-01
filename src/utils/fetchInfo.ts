@@ -8,7 +8,7 @@
 import { SpawnOptions } from 'node:child_process';
 import path from 'node:path';
 import got from 'got';
-import semverDiff from 'semver-diff';
+import semver from 'semver';
 import packageJson from 'package-json';
 import { Interfaces } from '@oclif/core';
 import fs from 'fs-extra';
@@ -76,7 +76,7 @@ export async function fetchInfo(options: Options): Promise<{ [pkg: string]: PkgU
     const update: PkgUpdate = {};
     for await (const distTag of Object.keys(pkgJson['dist-tags'])) {
       const latest = pkgJson['dist-tags'][distTag];
-      const type = semverDiff(options.pkg.version, latest) as string;
+      const type = semver.diff(options.pkg.version, latest) as string;
       let changeLogUrl: string;
 
       if (type && type !== 'latest') {

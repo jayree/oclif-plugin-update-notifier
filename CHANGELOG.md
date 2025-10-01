@@ -1,3 +1,10 @@
+## [1.5.138](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.137...v1.5.138) (2025-10-01)
+
+
+### Bug Fixes
+
+* **deps:** bump semver-diff from 4.0.0 to 5.0.0 ([#995](https://github.com/jayree/oclif-plugin-update-notifier/issues/995)) ([2d6989e](https://github.com/jayree/oclif-plugin-update-notifier/commit/2d6989e2d0143ab27f53609d71f1dd4cc12036b5))
+
 ## [1.5.137](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.136...v1.5.137) (2025-09-26)
 
 

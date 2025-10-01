@@ -22,7 +22,7 @@
     "@oclif/plugin-command-snapshot": "^5.3.6",
     "@oclif/plugin-help": "^6.2.33",
     "@oclif/test": "^4.1.14",
-    "@salesforce/dev-scripts": "^10.2.12",
+    "@salesforce/dev-scripts": "^11.0.2",
     "@types/boxen": "^3.0.5",
     "@types/debug": "^4.1.12",
     "@types/fs-extra": "^11.0.4",
@@ -54,7 +54,7 @@
   "keywords": [
     "oclif-plugin"
   ],
-  "license": "BSD-3-Clause",
+  "license": "Apache-2.0",
   "oclif": {
     "commands": "./lib/commands",
     "bin": "oclif-example",
@@ -91,6 +91,7 @@
     "clean-all": "sf-clean all",
     "compile": "wireit",
     "docs": "sf-docs",
+    "fix-license": "eslint src test --fix --rule \"header/header: [2]\"",
     "format": "wireit",
     "lint": "wireit",
     "postpack": "sf-clean --ignore-signing-artifacts",

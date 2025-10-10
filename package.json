@@ -15,7 +15,7 @@
     "fs-extra": "^11.3.2",
     "got": "^14.4.9",
     "package-json": "^10.0.1",
-    "semver": "^7.7.2",
+    "semver": "^7.7.3",
     "tslib": "^2.8.1"
   },
   "devDependencies": {

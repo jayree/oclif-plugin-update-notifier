@@ -19,7 +19,7 @@ $ npm install -g oclif-plugin-update-notifier
 $ oclif-example COMMAND
 running command...
 $ oclif-example (--version)
-oclif-plugin-update-notifier/1.5.141 linux-x64 node-v22.20.0
+oclif-plugin-update-notifier/1.5.142 linux-x64 node-v24.11.0
 $ oclif-example --help [COMMAND]
 USAGE
   $ oclif-example COMMAND
@@ -57,5 +57,5 @@ DESCRIPTION
   check installed plugins for updates
 ```
 
-_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.141/src/commands/plugins/update/check.ts)_
+_See code: [src/commands/plugins/update/check.ts](https://github.com/jayree/oclif-plugin-update-notifier/blob/v1.5.142/src/commands/plugins/update/check.ts)_
 <!-- commandsstop -->

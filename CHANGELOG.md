@@ -1,3 +1,10 @@
+## [1.5.174](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.173...v1.5.174) (2026-08-04)
+
+
+### Bug Fixes
+
+* **deps:** bump github/codeql-action from 4.37.3 to 4.37.4 ([#1184](https://github.com/jayree/oclif-plugin-update-notifier/issues/1184)) ([7c58616](https://github.com/jayree/oclif-plugin-update-notifier/commit/7c586166c421e353c1d72c553bbdba753a51a62a))
+
 ## [1.5.173](https://github.com/jayree/oclif-plugin-update-notifier/compare/v1.5.172...v1.5.173) (2026-07-31)
 
 

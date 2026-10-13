@@ -9,7 +9,7 @@
     "@jayree/changelog": "^1.2.42",
     "@oclif/core": "^5.1.2",
     "@salesforce/kit": "^4.0.1",
-    "boxen": "^8.0.1",
+    "boxen": "^9.0.0",
     "chalk": "^6.0.1",
     "debug": "^4.4.3",
     "fs-extra": "^11.4.0",
